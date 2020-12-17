@@ -5,7 +5,7 @@ const auth = require('../../middlewares/auth');
 const router = routerx();
 
 
-//router.get('/list', categoriaController.list);
+router.get('/list', auth.verifyUsuario, categoriaController.list);
 
 
 module.exports = router;

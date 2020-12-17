@@ -4,12 +4,7 @@ const usuarioController = require('../../controllers/UsuarioController.js');
 const bcrypt = require('bcryptjs');
 const auth = require('../../middlewares/auth');
 
-const { restart } = require('nodemon');
-
-router.get('/list', auth.verifyAdmin,  async(req, res) => {
-    const usuario = await models.Usuario.findAll();
-    res.status(200).json(usuario)
-})
+router.get('/list', auth.verifyAdmin, usuarioController.list);
 
 router.post('/signup', async(req, res) => {
     req.body.password = bcrypt.hashSync(req.body.password)
