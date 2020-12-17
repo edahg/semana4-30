@@ -6,7 +6,8 @@ const auth = require('../../middlewares/auth');
 const router = routerx();
 
 
-//router.get('/list', articuloController.list);
+router.get('/list', auth.verifyUsuario, articuloController.list);
+router.post('/add', auth.verifyUsuario, articuloController.add);
 
 
 module.exports = router;
