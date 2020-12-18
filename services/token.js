@@ -48,7 +48,7 @@ module.exports = {
             const { id } = await jwt.verify(token, config.secret)
             const user = await models.Usuario.findOne({where:{
                 id: id,
-                estado: 1
+                //estado: 1
             }});
             if(user){
                 return user;
