@@ -6,16 +6,9 @@ const router = routerx();
 
 
 router.get('/list', auth.verifyUsuario, categoriaController.list);
-<<<<<<< HEAD
 router.post('/add', auth.verifyAdmin, categoriaController.add)
 router.put('/update', auth.verifyAdmin, categoriaController.update)
 router.put('/activate', auth.verifyAdmin, categoriaController.activate)
 router.put('/deactivate', auth.verifyAdmin, categoriaController.deactivate)
-=======
-router.post('/add', auth.verifyAdmin, categoriaController.add);
-router.put('/update', auth.verifyAdmin, categoriaController.update);
-router.put('/activate', auth.verifyAdmin, categoriaController.activate);
-router.put('/deactivate', auth.verifyAdmin, categoriaController.deactivate);
->>>>>>> master
 
 module.exports = router;
