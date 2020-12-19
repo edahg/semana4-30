@@ -7,10 +7,10 @@ const router = routerx();
 
 
 router.get('/list', articuloController.list);
-router.post('/add', auth.verifyUsuario, articuloController.add);
-router.put('/update', auth.verifyUsuario, articuloController.update);
-router.put('/activate', auth.verifyUsuario, articuloController.activate);
-router.put('/deactivate', auth.verifyUsuario, articuloController.deactivate);
+router.post('/add', auth.verifyAdmin, articuloController.add);
+router.put('/update', auth.verifyAdmin, articuloController.update);
+router.put('/activate', auth.verifyAdmin, articuloController.activate);
+router.put('/deactivate', auth.verifyAdmin, articuloController.deactivate);
 
 
 module.exports = router;
