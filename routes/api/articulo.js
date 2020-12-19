@@ -8,9 +8,8 @@ const router = routerx();
 
 router.get('/list', articuloController.list);
 router.post('/add', auth.verifyAdmin, articuloController.add);
-router.put('/update', auth.verifyAdmin, articuloController.update);
-router.put('/activate', auth.verifyAdmin, articuloController.activate);
-router.put('/deactivate', auth.verifyAdmin, articuloController.deactivate);
-
+router.put('/update', auth.verifyAdmin, articuloController.update)
+router.put('/activate', auth.verifyAdmin, articuloController.activate)
+router.put('/deactivate', auth.verifyAdmin, articuloController.deactivate)
 
 module.exports = router;
