@@ -21,11 +21,11 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       categoriaId: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.INTEGER, 
         allowNull: false,
         references: {
-          model: 'Categoria',
-          key: 'id'
+          model: "Categoria",
+          key: "id"
         }
       },
       createdAt: {
