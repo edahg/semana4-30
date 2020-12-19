@@ -13,7 +13,7 @@ const checkToken = async(token) =>{
     }
     const user = await models.Usuario.findOne({where:{
         id: localID,
-        estado: 1
+        //estado: 1
     }});
     if(user){
         const token = encode(user.id, user.rol)
